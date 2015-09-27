@@ -83,10 +83,9 @@ P1906MOLMotion::ComputePropagationDelay (Ptr<P1906CommunicationInterface> src,
 
   double distance = dstMobility->GetDistanceFrom (srcMobility);
   double delay = pow(distance,2)/(GetDiffusionConefficient ()*6);
-  double diffusion = GetDiffusionConefficient ();
 
-  NS_LOG_FUNCTION (this << "[dist,diffusion,delay]" << distance <<  diffusion << delay);
- 
+  NS_LOG_FUNCTION (this << "[dist,diffusion,delay]" << distance << GetDiffusionConefficient () << delay);
+
   return delay;
 }
 
